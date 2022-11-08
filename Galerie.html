@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/main.css" rel="stylesheet"/>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<header>
+
+    <nav class="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="../Site%20Front%20end/myFirstPage.html" class="flex items-center">
+                <img src="https://img2.freepng.fr/20180722/qwu/kisspng-logo-tower-castle-castle-logo-5b553542c0c6f0.3365804915323108507896.jpg"
+                     class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap">Les Chateaux de France</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
+                    <li>
+                        <a href="../Site%20Front%20end/myFirstPage.html"
+                           class="block py-2 pr-4 pl-3 text-white bg-black rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                           aria-current="page">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Questionnaire.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Questionnaire</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Liste_des_chateaux.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Liste
+                            des châteaux</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Galerie.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Galerie</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+<section class="overflow-hidden text-gray-700 ">
+    <div class=" container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
+        <div class="flex flex-wrap -m-1 md:-m-2">
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1566473814373-a6c6a3acd905?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1659526062822-72f35fedff25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80">
+                </div>
+            </div>
+
+
+            <div class="flex flex-wrap w-1/3 ">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1643888829579-98d898d04609?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1505552411588-51fce16351ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1563457958332-3456c7aeb4b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1526816229784-65d5d54ac8bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1526813885396-5a02a6bfba24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1536612758564-c8dfe49adbc1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2064&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1517924889263-d6bd0d6f5aaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1451055959797-14c0cfba1a43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1594735514819-6bdb44c65772?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/15/castle.JPG?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1536756300610-6231d68aaf9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1596312906091-281b15599021?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1550&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1665301342026-c71f9abfa1f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1570694835563-43de4c676d30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1584528904246-66767484ffa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-1/3">
+                <div class="w-full p-1 md:p-2">
+                    <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
+                         src="https://images.unsplash.com/photo-1660401023330-318f599edfa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80">
+                </div>
+            </div>
+            <div class="flex flex-wrap w-2/3">
+                <button
+                        class=" mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                    <a href="https://www.eupedia.com/guide_de_voyage/france/les_plus_beaux_chateaux_de_france.shtml"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Voir
+                        d'autres chatêaux</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<footer class="bg-gray-200 text-center lg:text-left mt-auto">
+    <div class="text-gray-700 text-center p-4">
+        © 2022 Copyright:
+        <a class="text-gray-800" href=""
+        >Châteaux de France</a
+        >
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+</html>

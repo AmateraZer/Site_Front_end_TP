@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Questionnaire</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/main.css" rel="stylesheet"/>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+
+    </script>
+</head>
+<body>
+<nav class="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <a href="../Site%20Front%20end/myFirstPage.html" class="flex items-center">
+            <img src="https://img2.freepng.fr/20180722/qwu/kisspng-logo-tower-castle-castle-logo-5b553542c0c6f0.3365804915323108507896.jpg"
+                 class="mr-3 h-6 sm:h-9" alt="Chateau logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap">Les Chateaux de France</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
+                <li>
+                    <a href="../Site%20Front%20end/myFirstPage.html"
+                       class="block py-2 pr-4 pl-3 text-white bg-black rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                       aria-current="page">Accueil</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Questionnaire.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Questionnaire</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Liste_des_chateaux.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Liste
+                        des châteaux</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Galerie.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Galerie</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="mt-10 sm:mt-0 flex justify-center pt-10">
+    <div class="md:grid md:grid-cols-1 md:gap-6 ">
+
+        <div class="mt-5 md:mt-0 md:col-span-2">
+            <form action="#" method="POST" onsubmit="handle_form_submission()">
+                <div class="shadow overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="grid grid-cols-6 gap-6">
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="first_name" class="block text-sm font-medium text-gray-700">Prénom</label>
+                                <input type="text" name="first_name" id="first_name" autocomplete="given-name"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="John" required>
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="last_name" class="block text-sm font-medium text-gray-700">Nom</label>
+                                <input type="text" name="last_name" id="last_name" autocomplete="family-name"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="Doe" required>
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-4">
+                                <label for="email_address" class="block text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" name="email_address" id="email_address" autocomplete="email"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="xyz@example.com" required>
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3">
+                                <label for="country" class="block text-sm font-medium text-gray-700">D'ou venez vous
+                                    ?</label>
+                                <select id="country" name="country" autocomplete="country"
+                                        class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <option>France</option>
+                                    <option>Belgique</option>
+                                    <option>Suisse</option>
+                                    <option>Royaume-Uni</option>
+                                    <option>Espagne</option>
+                                    <option>Italie</option>
+                                    <option>Autres</option>
+                                </select>
+                            </div>
+
+                            <div class="col-span-6">
+                                <label for="street_address" class="block text-sm font-medium text-gray-700">Votre
+                                    Château favoris</label>
+                                <input type="text" name="street_address" id="street_address"
+                                       autocomplete="street-address"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="Exemple : Mon château" required>
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                                <label for="city" class="block text-sm font-medium text-gray-700">Ville du
+                                    château</label>
+                                <input type="text" name="city" id="city"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="Rennes" required>
+                            </div>
+
+                            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                <label for="state" class="block text-sm font-medium text-gray-700">Département du
+                                    château</label>
+                                <input type="number" name="state" id="state"
+                                       class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                       placeholder="35" required>
+                            </div>
+
+                            <div class="col-span-6 items-center ">
+                                <label for="city" class="block text-sm font-medium text-gray-700 ">Vous préférez
+                                    :</label>
+                                <input id="default-radio-1" type="radio" value="" name="default-radio"
+                                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-radio-1" class="ml-2 text-sm font-medium text-black ">Les châteaux
+                                    du Moyen-Âge</label>
+                            </div>
+                            <div class="col-span-6 items-center">
+                                <input checked id="default-radio-2" type="radio" value="" name="default-radio"
+                                       class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                <label for="default-radio-2" class="ml-2 text-sm font-medium text-black">Les châteaux de
+                                    la Renaissance</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <button onclick="" type="submit"
+                                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Envoyer
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function handle_form_submission() {
+        alert('Votre Réponse est enregistré');
+        return false;
+    }
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+</html>

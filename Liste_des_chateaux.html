@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Liste des châteaux</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/main.css" rel="stylesheet"/>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+
+
+    </script>
+</head>
+<body>
+<nav class="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+        <a href="../Site%20Front%20end/myFirstPage.html" class="flex items-center">
+            <img src="https://img2.freepng.fr/20180722/qwu/kisspng-logo-tower-castle-castle-logo-5b553542c0c6f0.3365804915323108507896.jpg"
+                 class="mr-3 h-6 sm:h-9" alt="Flowbite Logo">
+            <span class="self-center text-xl font-semibold whitespace-nowrap">Les Chateaux de France</span>
+        </a>
+        <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"></path>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
+                <li>
+                    <a href="../Site%20Front%20end/myFirstPage.html"
+                       class="block py-2 pr-4 pl-3 text-white bg-black rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                       aria-current="page">Accueil</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Questionnaire.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Questionnaire</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Liste_des_chateaux.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Liste
+                        des châteaux</a>
+                </li>
+                <li>
+                    <a href="../Site%20Front%20end/Galerie.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Galerie</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="min-w-full">
+                    <thead class="bg-white border-b">
+                    <tr>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            #
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Nom du chateau
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Localisation
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Département
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Type
+                        </th>
+                        <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+                            Année de création
+                        </th>
+
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Angers" class="flex items-center">
+                            Château des ducs d'Anjou
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Angers
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Château fort
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            13ᵉ et 14ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                            Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">3</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Argy" class="flex items-center">
+                                Château d'Argy
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Argy
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            l'Indre
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Néo-classique
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            12ᵉ et 15ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">4</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Fort_d%27Ambleteuse" class="flex items-center">
+                                Fort d'Ambleteuse
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Ambleteuse
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Pas-de-Calais
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Forteresse
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">5</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Boulogne-sur-Mer" class="flex items-center">
+                                Château de Boulogne-sur-Mer
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Boulogne-sur-Mer
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Pas-de-Calais
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Château fort
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            13ᵉ et 16ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                                Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                                Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                                Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                                Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+
+                    <tr class="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">2</td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            <a href="https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Br%C3%A9z%C3%A9" class="flex items-center">
+                                Château de Brézé
+                            </a>
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Baugé
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Maine et Loire
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            Renaissance
+                        </td>
+                        <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                            16ᵉ et 17ᵉ siècles
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+</html>

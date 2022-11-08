@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title></title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="css/main.css" rel="stylesheet"/>
+
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<header>
+
+    <nav class="bg-gray-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded ">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="../Site%20Front%20end/myFirstPage.html" class="flex items-center">
+                <img src="https://img2.freepng.fr/20180722/qwu/kisspng-logo-tower-castle-castle-logo-5b553542c0c6f0.3365804915323108507896.jpg"
+                     class="mr-3 h-6 sm:h-9" alt="Chateau logo">
+                <span class="self-center text-xl font-semibold whitespace-nowrap">Les Chateaux de France</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+                    aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                          clip-rule="evenodd"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
+                    <li>
+                        <a href="../Site%20Front%20end/myFirstPage.html"
+                           class="block py-2 pr-4 pl-3 text-white bg-black rounded md:bg-transparent md:text-black md:p-0 dark:text-white"
+                           aria-current="page">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Questionnaire.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Questionnaire</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Liste_des_chateaux.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Liste
+                            des châteaux</a>
+                    </li>
+                    <li>
+                        <a href="../Site%20Front%20end/Galerie.html"
+                           class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Galerie</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<body class="flex flex-col min-h-screen">
+<div
+        class="relative overflow-hidden bg-center bg-no-repeat bg-cover bg-[url('https://www.temps-de-vivre.com/wp-content/uploads/2021/07/banner-commarque.jpg')]"
+>
+    <div class="pt-24 background_home">
+        <div
+                class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
+        >
+            <!--Left Col-->
+            <div
+                    class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+            >
+
+                <h1 class="my-4 text-5xl font-bold leading-tight text-white">
+                    Les châteaux de France.
+                </h1>
+                <p class="leading-normal text-2xl mb-8 text-white">
+                    Vous pouvez retrouver à travers ce site internet les différents châteaux de france et leurs
+                    caractéristiques.
+                </p>
+
+            </div>
+            <!--Right Col-->
+            <div class="w-full md:w-3/5 py-6 text-center">
+                <img
+                        class="w-full md:w-4/5 z-50 rounded-full px-5"
+                        src="https://images.unsplash.com/photo-1560810118-031a5590b5de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 p-5 pr-2 -m-1 md:-m-2">
+    <div class="flex justify-center p-5">
+        <div
+                class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+        >
+            <img
+                    class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                    src="https://culture-rh.com/wp-content/uploads/2022/06/comment-construire-elaborer-questionnaire-qvt-etapes-question-modele.jpg"
+                    alt=""
+            />
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Questionnaire</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Si vous souhaitez partager votre avis sur certains châteaux de France, vous pouvez répondre pour
+                    améliorer notre site.
+                </p>
+                <button
+
+                        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+
+                >
+                    <a href="../Site%20Front%20end/Questionnaire.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Questionnaire</a>
+
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center p-5">
+        <div
+                class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+        >
+            <img
+                    class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                    src="http://notrebellefrance.com/wp-content/uploads/2017/02/Le-ch%C3%A2teau-de-Chenonceau.jpg"
+                    alt=""
+            />
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Liste des châteaux</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Vous pouvez consulter certains des plus beaux châteaux de france. Cette liste sera mise à jour au
+                    fil du temps.
+                </p>
+                <button
+                        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                >
+                    <a href="../Site%20Front%20end/Liste_des_chateaux.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Liste
+                        des Châteaux</a>
+
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center p-5 h-50">
+        <div
+                class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg"
+        >
+            <img
+                    class="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
+                    src="https://www.okvoyage.com/wp-content/uploads/2020/11/beaux-chateaux-france-versailles.jpeg"
+                    alt=""
+            />
+            <div class="p-6 flex flex-col justify-start">
+                <h5 class="text-gray-900 text-xl font-medium mb-2">Galerie</h5>
+                <p class="text-gray-700 text-base mb-4">
+                    Vous pouvez consulter cette page afin de pouvoir observer certains des plus beaux châteaux (liste
+                    mise à jour au fil du temps).
+                </p>
+                <button
+                        class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                >
+                    <a href="../Site%20Front%20end/Galerie.html"
+                       class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-gray-200 md:p-0">Galerie</a>
+
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+<script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</body>
+
+<footer class="bg-gray-200 text-center lg:text-left mt-auto">
+    <div class="text-gray-700 text-center p-4">
+        © 2022 Copyright:
+        <a class="text-gray-800" href=""
+        >Châteaux de France</a
+        >
+    </div>
+</footer>
+</html>
